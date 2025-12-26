@@ -12,17 +12,17 @@
 	<li>Microservices - Why, What and How?</li>
 	<li>Splitting the Codebase</li>
 	<li>Splitting the Database</li>
-	<li>Centralized Configuration using Spring Cloud Config Server</li>
+	<li>Centralized Configuration using Spring Cloud Config</li>
 	<li>Load Balancing using Spring Cloud LoadBalancer</li>
-	<li>Service Discovery using Eureka</li>
-	<li>Fault Tolerance & Resilience using Spring Cloud Resilience4j</li>
+	<li>Service Discovery using Spring Cloud Netflix Eureka</li>
+	<li>Fault Tolerance & Resilience using Spring Cloud CircuitBreaker Resilience4j</li>
 	<li>API Gateway using Spring Cloud Gateway</li>
 	<li>Inter-Service Communication using Spring Cloud OpenFeign</li>
-	<li>Distributed Tracing using Micrometer, Brave and Zipkin</li>
-	<li>Centralized Configuration using Consul KV Store</li>
-	<li>Service Discovery using Consul</li>
+	<li>Distributed Tracing using Micrometer Tracing with Brave and Zipkin</li>
+	<li>Centralized Configuration using Spring Cloud HashiCorp Consul KV Store</li>
+	<li>Service Discovery using Spring Cloud HashiCorp Consul</li>
 	<li>Distributed Tracing using OpenTelemetry</li>
-	<li>Event Driven Communication using Apache Kafka</li>
+	<li>Event-Driven Communication using Apache Kafka</li>
 </ol>
 
 <hr>

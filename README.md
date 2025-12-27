@@ -81,7 +81,7 @@ You can learn these topics from my YouTube channel through dedicated playlists.
 <p align="justify">
     These demos are explained in detail on my YouTube channel <a href="https://www.youtube.com/@abhishekvermaa10"
         target="_blank"><b>Abhishek Verma</b></a>.
-    Watch the complete playlist here: <a href="https://www.youtube.com/playlist?list=PLJDwhlqmpSfM7NmtpvG5tR5TyYctS6yCA"
+    Watch the complete playlist here: <a href="https://www.youtube.com/playlist?list=PLJDwhlqmpSfO_i45MxRSKgn10q4rw3IhW"
         target="_blank"><b>Spring Microservices with Spring Boot</b></a>.
 </p>
 
@@ -105,7 +105,7 @@ You can learn these topics from my YouTube channel through dedicated playlists.
     </a>
     <a href="https://instagram.com/abhishekvermaa10" target="_blank">
         <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E1306C&logoColor=white&labelColor=&style=for-the-badge"
-            height="35" alt="Instagram />
+            height="35" alt="Instagram" />
     </a>
     <a href=" https://x.com/ytabhishekverma" target="_blank">
         <img src="https://img.shields.io/static/v1?message=X&logo=x&label=&color=000000&logoColor=white&labelColor=&style=for-the-badge"
@@ -167,8 +167,19 @@ You can learn these topics from my YouTube channel through dedicated playlists.
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" height="50"
             alt="Git" />
     </a>
+	<a href="https://mailpit.axllent.org/docs/install" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/mailpit.svg" height="50" alt="MailPit" />
+    </a>
+    <a href="https://developer.hashicorp.com/consul/install" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/hashicorp-consul.svg" height="50"
+            alt="Consul" />
+    </a>
+    <a href="https://kafka.apache.org/community/downloads" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg"
+            height="50" alt="Kafka" />
+    </a>
 </div>
 
 <hr>
 
-<div align="center">Copyright © 2026 Abhishek Verma - All Rights Reserved</div>
+<div align="center">Copyright © Abhishek Verma - All Rights Reserved</div>

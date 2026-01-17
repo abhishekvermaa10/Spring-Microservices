@@ -46,13 +46,13 @@ public class OwnerController {
 	public ResponseEntity<Void> updatePetDetails(@PathVariable int ownerId, @RequestBody UpdatePetDTO updatePetDTO)
 			throws OwnerNotFoundException {
 		ownerService.updatePetDetails(ownerId, updatePetDTO.name());
-		return ResponseEntity.status(HttpStatus.OK).build();
+		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 	}
 
 	@DeleteMapping("/{ownerId}")
 	public ResponseEntity<Void> deleteOwner(@PathVariable int ownerId) throws OwnerNotFoundException {
 		ownerService.deleteOwner(ownerId);
-		return ResponseEntity.status(HttpStatus.OK).build();
+		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 	}
 
 	@GetMapping

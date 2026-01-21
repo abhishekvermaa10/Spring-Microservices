@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "6e21ebf7-8bc3-44db-8c37-c608601f08bb",
+		"name": "Step-02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4662588",
+		"_collection_link": "https://youtube-8739.postman.co/workspace/Spring-Microservices~cca3564d-9cf5-4350-a177-3959ac9bd972/collection/4662588-6e21ebf7-8bc3-44db-8c37-c608601f08bb?action=share&source=collection_link&creator=4662588"
+	},
+	"item": [
+		{
+			"name": "OwnerMS",
+			"item": [
+				{
+					"name": "Save owner and pet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"firstName\",\r\n    \"lastName\": \"lastName\",\r\n    \"gender\": \"F\",\r\n    \"city\": \"city\",\r\n    \"state\": \"state\",\r\n    \"emailId\": \"mailId@scaleupindia.com\",\r\n    \"mobileNumber\": \"9009009099\",\r\n    \"petDTO\": {\r\n        \"name\": \"petName\",\r\n        \"gender\": \"M\",\r\n        \"type\": \"BIRD\",\r\n        \"category\": \"Domestic\",\r\n        \"birthDate\": \"2026-01-01\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/owners",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"owners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all owners and pets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/owners?page=0&size=1&sort=id,asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"owners"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "1"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update pet name",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"newPetName\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/owners/73",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"owners",
+								"73"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete owner and pet",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/owners/73",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"owners",
+								"73"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find owner and pet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/owners/73",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"owners",
+								"73"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PetMS",
+			"item": [
+				{
+					"name": "Fetch pet statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/pets/stats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"pets",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MailMS",
+			"item": [
+				{
+					"name": "sendEmail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"to\": \"mailId@scaleupindia.com\",\r\n    \"firstName\": \"firstName\",\r\n    \"lastName\": \"lastName\",\r\n    \"category\": \"WELCOME\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/mails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"mails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

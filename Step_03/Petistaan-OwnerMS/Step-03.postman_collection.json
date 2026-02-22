@@ -223,7 +223,7 @@
           "response": []
         },
         {
-          "name": "Delete owner",
+          "name": "Delete pet",
           "request": {
             "method": "DELETE",
             "header": [],

@@ -17,7 +17,7 @@
 	<li>Service Discovery using Spring Cloud Netflix Eureka</li>
 	<li>Fault Tolerance using Spring Cloud CircuitBreaker Resilience4j</li>
 	<li>API Gateway using Spring Cloud Gateway</li>
-	<li>Inter-Service Communication using Spring Cloud OpenFeign</li>
+	<li>Inter-Service Communication using Spring Cloud Feign</li>
 	<li>Distributed Tracing using Micrometer Tracing with Brave and Zipkin</li>
 	<li>Centralized Configuration using Spring Cloud HashiCorp Consul KV Store</li>
 	<li>Service Discovery using Spring Cloud HashiCorp Consul</li>

@@ -1,0 +1,942 @@
+{
+  "info": {
+    "_postman_id": "1207caa4-dd92-411b-bbd7-381825da467b",
+    "name": "Step-13",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "4662588",
+    "_collection_link": "https://go.postman.co/collection/4662588-1207caa4-dd92-411b-bbd7-381825da467b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "OwnerMS",
+      "item": [
+        {
+          "name": "Save owner and pet",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\": \"firstName\",\r\n    \"lastName\": \"lastName\",\r\n    \"gender\": \"F\",\r\n    \"city\": \"city\",\r\n    \"state\": \"state\",\r\n    \"emailId\": \"mailId@scaleupindia.com\",\r\n    \"mobileNumber\": \"9009009099\",\r\n    \"petDTO\": {\r\n        \"name\": \"petName\",\r\n        \"gender\": \"M\",\r\n        \"type\": \"BIRD\",\r\n        \"category\": \"Domestic\",\r\n        \"birthDate\": \"2026-01-01\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/owners",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "owners"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find owner and pet",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/owners/74",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "owners",
+                "74"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update pet name",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"newPetName\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/owners/70",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "owners",
+                "70"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete owner and pet",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/owners/73",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "owners",
+                "73"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Fetch all owners and pets",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/owners?page=0&size=1&sort=id,asc",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "owners"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "1"
+                },
+                {
+                  "key": "sort",
+                  "value": "id,asc"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "PetMS",
+      "item": [
+        {
+          "name": "Save pet",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"petName\",\r\n    \"gender\": \"M\",\r\n    \"type\": \"BIRD\",\r\n    \"category\": \"Domestic\",\r\n    \"birthDate\": \"2026-01-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8082/pets",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "pets"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find pet",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/pets/72",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "pets",
+                "72"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update pet name",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"newPetName\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8082/pets/73",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "pets",
+                "73"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete pet",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/pets/73",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "pets",
+                "73"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Fetch pet statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/pets/stats",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "pets",
+                "stats"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "MailMS",
+      "item": [
+        {
+          "name": "SendEmail",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"to\": \"mailId@scaleupindia.com\",\r\n    \"firstName\": \"firstName\",\r\n    \"lastName\": \"lastName\",\r\n    \"category\": \"WELCOME\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8083/mails",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "mails"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Refresh Configuration",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8083/actuator/refresh",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "actuator",
+                "refresh"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "SendEmail 2",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"to\": \"mailId@scaleupindia.com\",\r\n    \"firstName\": \"firstName\",\r\n    \"lastName\": \"lastName\",\r\n    \"category\": \"WELCOME\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8084/mails",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "mails"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Refresh Configuration 2",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8084/actuator/refresh",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "actuator",
+                "refresh"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Config Server",
+      "item": [
+        {
+          "name": "Read Petistaan-OwnerMS",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8500/v1/kv/config/Petistaan-OwnerMS/data",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8500",
+              "path": [
+                "v1",
+                "kv",
+                "config",
+                "Petistaan-OwnerMS",
+                "data"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Petistaan-OwnerMS",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "server.port=8081\r\nspring.datasource.url=jdbc:mysql://localhost:3306/petistaan_owner\r\nspring.datasource.username=${MYSQL_USERNAME}\r\nspring.datasource.password=${MYSQL_PASSWORD}\r\nspring.jpa.hibernate.ddl-auto=update\r\nspring.jpa.show-sql=true",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8500/v1/kv/config/Petistaan-OwnerMS/data",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8500",
+              "path": [
+                "v1",
+                "kv",
+                "config",
+                "Petistaan-OwnerMS",
+                "data"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Read Petistaan-PetMS",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8500/v1/kv/config/Petistaan-PetMS/data",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8500",
+              "path": [
+                "v1",
+                "kv",
+                "config",
+                "Petistaan-PetMS",
+                "data"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Petistaan-PetMS",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "server.port=8082\r\nspring.datasource.url=jdbc:mysql://localhost:3306/petistaan_pet\r\nspring.datasource.username=${MYSQL_USERNAME}\r\nspring.datasource.password=${MYSQL_PASSWORD}\r\nspring.jpa.hibernate.ddl-auto=update\r\nspring.jpa.show-sql=true",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8500/v1/kv/config/Petistaan-PetMS/data",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8500",
+              "path": [
+                "v1",
+                "kv",
+                "config",
+                "Petistaan-PetMS",
+                "data"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Read Petistaan-MailMS",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8500/v1/kv/config/Petistaan-MailMS/data",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8500",
+              "path": [
+                "v1",
+                "kv",
+                "config",
+                "Petistaan-MailMS",
+                "data"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Petistaan-MailMS",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "server.port=8083\r\nspring.mail.host=localhost\r\nspring.mail.port=1025\r\nspring.mail.properties.mail.smtp.auth=false\r\nspring.mail.properties.mail.smtp.starttls.enable=false\r\nspring.mail.username=${SYSTEM_EMAIL_ID}\r\nspring.mail.password=${SYSTEM_EMAIL_PASSWORD}",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8500/v1/kv/config/Petistaan-MailMS/data",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8500",
+              "path": [
+                "v1",
+                "kv",
+                "config",
+                "Petistaan-MailMS",
+                "data"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Discovery Server",
+      "item": [
+        {
+          "name": "Fetch all instances",
+          "protocolProfileBehavior": {
+            "disabledSystemHeaders": {
+              "accept": true
+            }
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8500/v1/catalog/services",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8500",
+              "path": [
+                "v1",
+                "catalog",
+                "services"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Gateway Server",
+      "item": [
+        {
+          "name": "Save owner and pet",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\": \"firstName\",\r\n    \"lastName\": \"lastName\",\r\n    \"gender\": \"F\",\r\n    \"city\": \"city\",\r\n    \"state\": \"state\",\r\n    \"emailId\": \"mailId@scaleupindia.com\",\r\n    \"mobileNumber\": \"9009009099\",\r\n    \"petDTO\": {\r\n        \"name\": \"petName\",\r\n        \"gender\": \"M\",\r\n        \"type\": \"BIRD\",\r\n        \"category\": \"Domestic\",\r\n        \"birthDate\": \"2026-01-01\"\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/petistaan/owners",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "petistaan",
+                "owners"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find owner and pet",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/petistaan/owners/74",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "petistaan",
+                "owners",
+                "74"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update pet name",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"newPetName\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/petistaan/owners/70",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "petistaan",
+                "owners",
+                "70"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete owner and pet",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/petistaan/owners/73",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "petistaan",
+                "owners",
+                "73"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Fetch all owners and pets",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/petistaan/owners?page=0&size=1&sort=id,asc",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "petistaan",
+                "owners"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "1"
+                },
+                {
+                  "key": "sort",
+                  "value": "id,asc"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Save pet",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"petName\",\r\n    \"gender\": \"M\",\r\n    \"type\": \"BIRD\",\r\n    \"category\": \"Domestic\",\r\n    \"birthDate\": \"2026-01-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/petistaan/pets",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "petistaan",
+                "pets"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find pet",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/petistaan/pets/72",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "petistaan",
+                "pets",
+                "72"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update pet name",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"newPetName\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/petistaan/pets/73",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "petistaan",
+                "pets",
+                "73"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete pet",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/petistaan/pets/73",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "petistaan",
+                "pets",
+                "73"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Fetch pet statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/petistaan/pets/stats",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "petistaan",
+                "pets",
+                "stats"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "SendEmail",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"to\": \"mailId@scaleupindia.com\",\r\n    \"firstName\": \"firstName\",\r\n    \"lastName\": \"lastName\",\r\n    \"category\": \"WELCOME\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/petistaan/mails",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "petistaan",
+                "mails"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Zipkin Server",
+      "item": [
+        {
+          "name": "List of Services",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9411/api/v2/services",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9411",
+              "path": [
+                "api",
+                "v2",
+                "services"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Fetch by Service Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9411/api/v2/traces?serviceName=petistaan-gateway-server",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9411",
+              "path": [
+                "api",
+                "v2",
+                "traces"
+              ],
+              "query": [
+                {
+                  "key": "serviceName",
+                  "value": "petistaan-gateway-server"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Fetch by Trace Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9411/api/v2/trace/69a7f0620277ea1cc8e285287f4c690c",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9411",
+              "path": [
+                "api",
+                "v2",
+                "trace",
+                "69a7f0620277ea1cc8e285287f4c690c"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

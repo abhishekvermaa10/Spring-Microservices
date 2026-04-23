@@ -22,8 +22,8 @@
 	<li>Centralized Configuration using Spring Cloud HashiCorp Consul</li>
 	<li>Service Discovery using Spring Cloud HashiCorp Consul</li>
 	<li>Inter-Service Communication using Spring HTTP Service Client</li>
-	<li>Distributed Tracing using OpenTelemetry</li>
-	<li>Event-Driven Communication using Apache Kafka</li>
+	<li>Event-Driven Communication using Spring Apache Kafka</li>
+	<li>Observability using OpenTelemetry</li>
 </ol>
 
 <hr>

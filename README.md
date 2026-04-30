@@ -179,6 +179,9 @@ You can learn these topics from my YouTube channel through dedicated playlists.
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg"
             height="50" alt="Kafka" />
     </a>
+	<a href="https://github.com/open-telemetry/opentelemetry-collector-releases/releases" target="_blank">
+		<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opentelemetry/opentelemetry-original.svg" height="50" alt="OpenTelemetry" />
+	</a> 
 </div>
 
 <hr>

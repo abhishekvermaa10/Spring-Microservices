@@ -1,0 +1,37 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch:
+
+exporters:
+  debug:
+    verbosity: basic
+  file/metrics:
+    path: ./metrics.json
+  file/traces:
+    path: ./traces.json
+  file/logs:
+    path: ./logs.json
+  otlp_http:
+    endpoint: https://otlp-gateway-prod-ap-south-1.grafana.net/otlp
+    headers:
+      Authorization: Basic MTYwOTQ0NDpnbGNfZXlKdklqb2lNVFl5TWpjME9TSXNJbTRpT2lKd1pYUnBjM1JoWVc0aUxDSnJJam9pTURsR2RGTTVVSFo2TXpVMVdXUlFNbmhvTjFjMU1YWmhJaXdpYlNJNmV5SnlJam9pY0hKdlpDMWhjQzF6YjNWMGFDMHhJbjE5
+
+service:
+  pipelines:
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, file/metrics, otlp_http]
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, file/traces, otlp_http]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, file/logs, otlp_http]

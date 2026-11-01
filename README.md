@@ -23,7 +23,8 @@
 	<li>Service Discovery using Spring Cloud HashiCorp Consul</li>
 	<li>Inter-Service Communication using Spring HTTP Service Client</li>
 	<li>Event-Driven Communication using Spring Apache Kafka</li>
-	<li>Observability using OpenTelemetry</li>
+	<li>Observability using OpenTelemetry and Grafana</li>
+	<li>Observability using OpenTelemetry and Dash0</li>
 </ol>
 
 <hr>

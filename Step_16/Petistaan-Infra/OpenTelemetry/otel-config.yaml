@@ -1,0 +1,37 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch:
+
+exporters:
+  debug:
+    verbosity: basic
+  file/metrics:
+    path: ./metrics.json
+  file/traces:
+    path: ./traces.json
+  file/logs:
+    path: ./logs.json
+  otlp_http:
+    endpoint: https://ingress.us-east-1.aws.dash0.com 
+    headers:
+      Authorization: Bearer auth_poKxs9ietpMG3wuSsENA1b1zPT6SGm8H
+
+service:
+  pipelines:
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, file/metrics, otlp_http]
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, file/traces, otlp_http]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [debug, file/logs, otlp_http]
